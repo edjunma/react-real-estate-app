@@ -288,9 +288,94 @@ var Listings = function (_Component) {
 		key: 'render',
 		value: function render() {
 			return _react2.default.createElement(
-				'div',
-				null,
-				'Listings'
+				'section',
+				{ className: 'listings' },
+				_react2.default.createElement(
+					'section',
+					{ className: 'search-area' },
+					_react2.default.createElement('input', { type: 'text', name: 'search' })
+				),
+				_react2.default.createElement(
+					'section',
+					{ className: 'sortby-area' },
+					_react2.default.createElement(
+						'div',
+						null,
+						'390 results found'
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'sort-options' },
+						_react2.default.createElement(
+							'select',
+							{ name: 'sortby', className: 'sortby' },
+							_react2.default.createElement(
+								'option',
+								{ value: 'price-asc' },
+								'Highest Price'
+							),
+							_react2.default.createElement(
+								'option',
+								{ value: 'price-dsc' },
+								'Lowest Price'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'view' },
+							_react2.default.createElement('i', { className: 'fa fa-th-list', 'aria-hidden': 'true' }),
+							_react2.default.createElement('i', { className: 'fa fa-th', 'aria-hidden': 'true' })
+						)
+					)
+				),
+				_react2.default.createElement(
+					'section',
+					{ className: 'listings-results' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'listing' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'listing-img' },
+							_react2.default.createElement(
+								'span',
+								{ className: 'Address' },
+								'Address'
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'details' },
+								_react2.default.createElement('div', { className: 'user-img' }),
+								_react2.default.createElement(
+									'div',
+									{ className: 'user-details' },
+									_react2.default.createElement(
+										'span',
+										{ className: 'user-name' },
+										'Nina Smith'
+									),
+									_react2.default.createElement(
+										'span',
+										{ className: 'post-date' },
+										'09/15/2019'
+									)
+								),
+								_react2.default.createElement(
+									'div',
+									{ className: 'listing-details' },
+									_react2.default.createElement(
+										'div',
+										{ className: 'floor-space' },
+										_react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
+										' 1000 ft\xB2'
+									),
+									_react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' })
+								)
+							)
+						)
+					)
+				),
+				_react2.default.createElement('section', { className: 'pagination' })
 			);
 		}
 	}]);
