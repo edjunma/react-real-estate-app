@@ -43,8 +43,114 @@ var Filter = function (_Component) {
 		value: function render() {
 			return _react2.default.createElement(
 				'section',
-				{ className: 'filter' },
-				'Filter'
+				{ id: 'filter' },
+				_react2.default.createElement(
+					'div',
+					{ className: 'inside' },
+					_react2.default.createElement(
+						'h4',
+						null,
+						'Filter'
+					),
+					_react2.default.createElement(
+						'select',
+						{ name: 'neighborhood', className: 'filters neighborhood' },
+						_react2.default.createElement(
+							'option',
+							null,
+							'Ridgewood'
+						)
+					),
+					_react2.default.createElement(
+						'select',
+						{ name: 'housetype', className: 'filters housetype' },
+						_react2.default.createElement(
+							'option',
+							null,
+							'Ranch'
+						)
+					),
+					_react2.default.createElement(
+						'select',
+						{ name: 'bedrooms', className: 'filters bedrooms' },
+						_react2.default.createElement(
+							'option',
+							null,
+							'Two Bedroom'
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'filters price' },
+						_react2.default.createElement(
+							'span',
+							{ className: 'title' },
+							'Price'
+						),
+						_react2.default.createElement('input', { type: 'text', name: 'min-price', className: 'min-price' }),
+						_react2.default.createElement('input', { type: 'text', name: 'max-price', className: 'max-price' })
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'filters floor-space' },
+						_react2.default.createElement(
+							'span',
+							{ className: 'title' },
+							'Floor Space'
+						),
+						_react2.default.createElement('input', { type: 'text', name: 'min-floor-space', className: 'min-floor-space' }),
+						_react2.default.createElement('input', { type: 'text', name: 'max-floor-space', className: 'max-floor-space' })
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'filters extras' },
+						_react2.default.createElement(
+							'span',
+							{ className: 'title' },
+							'Extras'
+						),
+						_react2.default.createElement(
+							'label',
+							{ 'for': 'extras' },
+							_react2.default.createElement(
+								'span',
+								null,
+								'Elevators'
+							),
+							_react2.default.createElement('input', { name: 'extras', type: 'checkbox', value: 'elevator' })
+						),
+						_react2.default.createElement(
+							'label',
+							{ 'for': 'extras' },
+							_react2.default.createElement(
+								'span',
+								null,
+								'Swimming Pool'
+							),
+							_react2.default.createElement('input', { name: 'extras', type: 'checkbox', value: 'swimming-pool' })
+						),
+						_react2.default.createElement(
+							'label',
+							{ 'for': 'extras' },
+							_react2.default.createElement(
+								'span',
+								null,
+								'Finished Basement'
+							),
+							_react2.default.createElement('input', { name: 'extras', type: 'checkbox', value: 'swimming-pool' })
+						),
+						_react2.default.createElement(
+							'label',
+							{ 'for': 'extras' },
+							_react2.default.createElement(
+								'span',
+								null,
+								'Gym'
+							),
+							_react2.default.createElement('input', { name: 'extras', type: 'checkbox', value: 'gym' })
+						)
+					)
+				)
 			);
 		}
 	}]);
@@ -71,10 +177,6 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _react = __webpack_require__(59);
 
 var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(77);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -186,8 +288,8 @@ var Listings = function (_Component) {
 		key: 'render',
 		value: function render() {
 			return _react2.default.createElement(
-				'section',
-				{ className: 'listings' },
+				'div',
+				null,
 				'Listings'
 			);
 		}
@@ -212,7 +314,7 @@ var _react = __webpack_require__(59);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(77);
+var _reactDom = __webpack_require__(101);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
