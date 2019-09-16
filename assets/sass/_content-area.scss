@@ -1,7 +1,6 @@
 #content-area {
 	overflow: auto;
 	width: 100%;
-	background: black;
 	min-height: 100vh;
 }
 
@@ -79,8 +78,10 @@
 			background: transparent;
 			font-size: 2rem;
 			border: none;
-			border-bottom: 2px solid $lightgrey;
+			border-bottom: 2px solid $darkgrey;
+			font-weight: 100;
 			margin-bottom: 20px;
+			color: $lightgrey;
 		}
 	}
 
@@ -89,7 +90,7 @@
 
 		.results {
 			font-size: 0.8rem;
-			color: $lightgrey;
+			color: $darkgrey;
 			display: inline-block;
 		}
 
@@ -123,7 +124,6 @@
 
 		.listing {
 			background: #fff;
-			width: 33.33%;
 			border-radius: 5px;
 			-webkit-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
 			-moz-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
@@ -241,9 +241,21 @@
 						margin-bottom: 10px;
 					}
 				}
+			}
+		}
+		.bottom-info {
+			padding: 20px 15px;
 
-				.bedrooms {
-				}
+			.price {
+				font-size: 1.1rem;
+				display: block;
+				margin-bottom: 10px;
+				color: $darkgrey;
+			}
+			.location {
+				font-size: 1.2rem;
+				display: block;
+				color: $lightgrey;
 			}
 		}
 	}
@@ -263,10 +275,36 @@
 	}
 }
 
+#pagination {
+	text-align: center;
+
+	.pages {
+		display: inline-block;
+		background: white;
+		-webkit-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+		-moz-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+		box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+
+		li {
+			display: inline-block;
+			padding: 20px 30px;
+
+			&.active,
+			&:hover {
+				color: white;
+				background: $pink;
+				font-weight: 700;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
 .col-md-3 {
 	width: 25%;
 	display: inline-block;
 	vertical-align: top;
+	padding: 0 15px;
 }
 
 .col-md-9 {
