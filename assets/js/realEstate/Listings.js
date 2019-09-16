@@ -9,7 +9,7 @@ export default class Listings extends Component {
 	}
 	render() {
 		return (
-			<section className='listings'>
+			<section id='listings'>
 				{/* Search Area */}
 				<section className='search-area'>
 					<input type='text' name='search' />
@@ -28,6 +28,7 @@ export default class Listings extends Component {
 						</div>
 					</div>
 				</section>
+        
 				{/* Listings */}
 				<section className='listings-results'>
 					<div className='listing'>
@@ -41,16 +42,36 @@ export default class Listings extends Component {
 								</div>
 								<div className='listing-details'>
 									<div className='floor-space'>
-										<i className='fa fa-square-o' aria-hidden='true'></i> 1000 ft&sup2;
+										<i className='fa fa-square-o' aria-hidden='true'></i>
+										<span>1000 ft&sup2;</span>
 									</div>
-									<i className='fa fa-bed' aria-hidden='true'></i>
+									<div className='bedrooms'>
+										<i className='fa fa-bed' aria-hidden='true'></i>
+										<span>3 bedrooms</span>
+									</div>
 								</div>
 							</div>
+						</div>
+						<div className='bottom-info'>
+							<span>$1000 / month </span>
+							<span>
+								<i className='fa fa-map-marker' aria-hidden='true'></i> Ridgewood, NY
+							</span>
 						</div>
 					</div>
 				</section>
 				{/* Pagination */}
-				<section className='pagination'></section>
+				<section className='pagination'>
+					<ul className='pagination-nums'>
+						<li>Prev</li>
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>Next</li>
+					</ul>
+				</section>
 			</section>
 		);
 	}
