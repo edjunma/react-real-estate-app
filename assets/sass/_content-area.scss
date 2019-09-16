@@ -89,8 +89,8 @@
 		margin-bottom: 20px;
 
 		.results {
-			font-size: 0.8rem;
 			color: $darkgrey;
+			font-size: 0.8rem;
 			display: inline-block;
 		}
 
@@ -102,10 +102,11 @@
 				font-weight: 300;
 				border: 1px solid $lightgrey;
 				background: transparent;
-				padding: 20px;
 				display: inline-block;
 				margin-right: 15px;
 				vertical-align: top;
+				padding: 2px;
+				min-width: 150px;
 			}
 
 			.view {
