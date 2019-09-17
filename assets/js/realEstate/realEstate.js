@@ -4,6 +4,7 @@ import Header from './Header';
 import Filter from './Filter';
 import Listings from './Listings';
 import listingsData from './data/listingsData';
+import { SIGTERM } from 'constants';
 
 class App extends Component {
 	constructor() {
@@ -38,7 +39,11 @@ class App extends Component {
 		);
 	}
 
-	filteredData() {}
+	filteredData() {
+		var newData = this.state.listingsData.filter(() => {
+			return item.price >= this.state.min_price
+		})
+	}
 
 	render() {
 		return (
