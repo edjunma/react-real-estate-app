@@ -18,7 +18,7 @@ var listingsData = [
 		price: 420000,
 		floorSpace: 4000,
 		extras: ['elevator', 'gym'],
-		homeType: 'Apartment',
+		homeType: 'House',
 		image:
 			'http://yslshoesshop.com/wp-content/uploads/2019/03/small-modern-apartment-apartment-small-modern-exterior-design-ideas-small-modern-apartment-exterior-design.jpg'
 	},
@@ -30,7 +30,7 @@ var listingsData = [
 		price: 200000,
 		floorSpace: 2100,
 		extras: ['elevator', 'gym'],
-		homeType: 'Apartment',
+		homeType: 'Condo',
 		image:
 			'https://senaterace2012.com/wp-content/uploads/apartment-building-design-ideas-modern-exterior_146247.jpg'
 	},
@@ -42,7 +42,7 @@ var listingsData = [
 		price: 320000,
 		floorSpace: 3000,
 		extras: ['elevator', 'gym'],
-		homeType: 'Apartment',
+		homeType: 'Multi-Home',
 		image:
 			'http://vondells.com/daut/as/l/a/apartment-exterior-design-best-apartments-modern-small-living-room-decorating-ideas_exterior-apartment-design-ideas_exterior_exterior-homes-designs-home-design-tool-restaurant-software-free-shutter-ho_972x525.jpg'
 	},
@@ -65,7 +65,7 @@ var listingsData = [
 		price: 180000,
 		floorSpace: 1800,
 		extras: ['elevator', 'gym'],
-		homeType: 'Apartment',
+		homeType: 'Condo',
 		image:
 			'https://images1.apartments.com/i2/spqueuFThK0yXuZv980l6ZLiS86Ig17IBQTNIELWvlA/117/the-modern-fort-lee-nj-1br-15ba---916-sf.jpg'
 	},
@@ -77,7 +77,7 @@ var listingsData = [
 		price: 850000,
 		floorSpace: 4000,
 		extras: ['elevator', 'gym'],
-		homeType: 'Apartment',
+		homeType: 'Single Home',
 		image:
 			'https://www.contemporist.com/wp-content/uploads/2018/07/modern-apartment-smart-glass-wall-130718-152-01-800x481.jpg'
 	},
