@@ -40,9 +40,18 @@ class App extends Component {
 	}
 
 	filteredData() {
-		var newData = this.state.listingsData.filter(() => {
-			return item.price >= this.state.min_price
-		})
+		var newData = this.state.listingsData.filter(item => {
+			return (
+				item.price >= this.state.min_price &&
+				item.price <= this.state.max_price &&
+				item.floorSpace >= this.state.min_floor_space &&
+				item.floorSpace <= this.state.max_floor_space
+			);
+		});
+
+		this.setState({
+			filteredData: newData
+		});
 	}
 
 	render() {
