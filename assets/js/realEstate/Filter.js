@@ -12,11 +12,13 @@ export default class Filter extends Component {
 			<section id='filter'>
 				<div className='inside'>
 					<h4>Filter</h4>
+					<label htmlFor='city'>City</label>
 					<select name='city' className='filters city' onChange={this.props.change}>
 						<option value='All'>All</option>
 						<option value='Ridgewood'>Ridgewood</option>
 						<option value='Miami'>Miami</option>
 					</select>
+					<label htmlFor='city'>Home Type</label>
 					<select name='homeType' className='filters homeType' onChange={this.props.change}>
 						<option value='All'>All Homes</option>
 						<option value='Ranch'>Ranch</option>
@@ -24,6 +26,7 @@ export default class Filter extends Component {
 						<option value='Studio'>Studio</option>
 						<option value='Room'>Room</option>
 					</select>
+					<label htmlFor='city'>Bedrooms</label>
 					<select name='bedrooms' className='filters bedrooms' onChange={this.props.change}>
 						<option value='0'>0+ BR</option>
 						<option value='1'>1+ BR</option>
