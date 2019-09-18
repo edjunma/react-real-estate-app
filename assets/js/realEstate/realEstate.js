@@ -12,6 +12,9 @@ class App extends Component {
 		this.state = {
 			name: 'Edmond',
 			listingsData,
+			city: 'Ridgewood',
+			homeType: 'studio',
+			bedrooms: 1,
 			min_price: 0,
 			max_price: 10000000,
 			min_floor_space: 0,
@@ -48,6 +51,12 @@ class App extends Component {
 				item.floorSpace <= this.state.max_floor_space
 			);
 		});
+
+		if (this.state.city != 'All') {
+			newData = newData.filter(item => {
+				return item.city == this.state.city;
+			});
+		}
 
 		this.setState({
 			filteredData: newData
