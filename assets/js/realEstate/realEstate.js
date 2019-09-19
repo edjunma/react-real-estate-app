@@ -4,7 +4,6 @@ import Header from './Header';
 import Filter from './Filter';
 import Listings from './Listings';
 import listingsData from './data/listingsData';
-import { SIGTERM } from 'constants';
 
 class App extends Component {
 	constructor() {
@@ -27,6 +26,7 @@ class App extends Component {
 		};
 		this.change = this.change.bind(this);
 		this.filteredData = this.filteredData.bind(this);
+		this.populateForms = this.populateForms.bind(this);
 	}
 	change(event) {
 		var name = event.target.name;
@@ -38,6 +38,7 @@ class App extends Component {
 			},
 			() => {
 				console.log(this.state);
+				this.filteredData();
 			}
 		);
 	}
@@ -68,6 +69,16 @@ class App extends Component {
 		this.setState({
 			filteredData: newData
 		});
+	}
+
+	populateForms() {
+		// city
+		var cities = this.state.listingsData.map(() => {
+			return item.city;
+		});
+		// homeType
+
+		// bedrooms
 	}
 
 	render() {
