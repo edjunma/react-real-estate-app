@@ -30,6 +30,16 @@ class App extends Component {
 		this.filteredData = this.filteredData.bind(this);
 		this.populateForms = this.populateForms.bind(this);
 	}
+	componentWillMount() {
+		var listingsData = this.state.listingsData.sort((a, b) => {
+			return a.price - b.price;
+		});
+
+		this.setState({
+			listingsData
+		});
+	}
+
 	change(event) {
 		var name = event.target.name;
 		var value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
@@ -81,7 +91,7 @@ class App extends Component {
 		cities = new Set(cities);
 		cities = [...cities];
 
-		cities = cities.sort()
+		cities = cities.sort();
 
 		// homeType
 		var homeTypes = this.state.listingsData.map(item => {
@@ -90,12 +100,16 @@ class App extends Component {
 		homeTypes = new Set(homeTypes);
 		homeTypes = [...homeTypes];
 
+		homeTypes = homeTypes.sort();
+
 		// bedrooms
 		var bedrooms = this.state.listingsData.map(item => {
 			return item.rooms;
 		});
 		bedrooms = new Set(bedrooms);
 		bedrooms = [...bedrooms];
+
+		bedrooms = bedrooms.sort();
 
 		this.setState(
 			{
