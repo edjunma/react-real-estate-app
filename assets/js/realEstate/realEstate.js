@@ -95,13 +95,18 @@ class App extends Component {
 		bedrooms = new Set(bedrooms);
 		bedrooms = [...bedrooms];
 
-		this.setState({
-			populateFormsData: {
-				homeTypes,
-				bedrooms,
-				cities
+		this.setState(
+			{
+				populateFormsData: {
+					homeTypes,
+					bedrooms,
+					cities
+				}
+			},
+			() => {
+				console.log(this.state);
 			}
-		});
+		);
 	}
 
 	render() {
@@ -109,7 +114,11 @@ class App extends Component {
 			<div>
 				<Header />
 				<section id='content-area'>
-					<Filter change={this.change} globalState={this.state} />
+					<Filter
+						change={this.change}
+						globalState={this.state}
+						populateAction={this.populateForms}
+					/>
 					<Listings listingsData={this.state.filteredData} />
 				</section>
 			</div>

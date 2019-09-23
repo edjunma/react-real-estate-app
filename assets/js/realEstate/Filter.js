@@ -6,7 +6,54 @@ export default class Filter extends Component {
 		this.state = {
 			name: 'Edmond'
 		};
+		this.cities = this.cities.bind(this);
+		this.homeTypes = this.homeTypes.bind(this);
+		this.bedrooms = this.bedrooms.bind(this);
 	}
+
+	componentWillMount() {
+		this.props.populateAction();
+	}
+
+	cities() {
+		if (this.props.globalState.populateFormsData.cities != undefined) {
+			var { cities } = this.props.globalState.populateFormsData;
+			return cities.map(item => {
+				return (
+					<option key={item} value={item}>
+						{item}
+					</option>
+				);
+			});
+		}
+	}
+
+	homeTypes() {
+		if (this.props.globalState.populateFormsData.homeTypes != undefined) {
+			var { homeTypes } = this.props.globalState.populateFormsData;
+			return homeTypes.map(item => {
+				return (
+					<option key={item} value={item}>
+						{item}
+					</option>
+				);
+			});
+		}
+	}
+
+	bedrooms() {
+		if (this.props.globalState.populateFormsData.bedrooms != undefined) {
+			var { bedrooms } = this.props.globalState.populateFormsData;
+			return bedrooms.map(item => {
+				return (
+					<option key={item} value={item}>
+						{item}
+					</option>
+				);
+			});
+		}
+	}
+
 	render() {
 		return (
 			<section id='filter'>
@@ -15,8 +62,7 @@ export default class Filter extends Component {
 					<label htmlFor='city'>City</label>
 					<select name='city' className='filters city' onChange={this.props.change}>
 						<option value='All'>All</option>
-						<option value='Ridgewood'>Ridgewood</option>
-						<option value='Miami'>Miami</option>
+						{this.cities()}
 					</select>
 					<label htmlFor='city'>Home Type</label>
 					<select name='homeType' className='filters homeType' onChange={this.props.change}>
