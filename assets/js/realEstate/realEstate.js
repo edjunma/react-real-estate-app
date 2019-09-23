@@ -81,6 +81,8 @@ class App extends Component {
 		cities = new Set(cities);
 		cities = [...cities];
 
+		cities = cities.sort()
+
 		// homeType
 		var homeTypes = this.state.listingsData.map(item => {
 			return item.homeType;

@@ -47,7 +47,7 @@ export default class Filter extends Component {
 			return bedrooms.map(item => {
 				return (
 					<option key={item} value={item}>
-						{item}
+						{item} + BR
 					</option>
 				);
 			});
@@ -67,18 +67,11 @@ export default class Filter extends Component {
 					<label htmlFor='city'>Home Type</label>
 					<select name='homeType' className='filters homeType' onChange={this.props.change}>
 						<option value='All'>All Homes</option>
-						<option value='Ranch'>Ranch</option>
-						<option value='Apartment'>Apartment</option>
-						<option value='Studio'>Studio</option>
-						<option value='Room'>Room</option>
+						{this.homeTypes()}
 					</select>
 					<label htmlFor='city'>Bedrooms</label>
 					<select name='bedrooms' className='filters bedrooms' onChange={this.props.change}>
-						<option value='0'>0+ BR</option>
-						<option value='1'>1+ BR</option>
-						<option value='2'>2+ BR</option>
-						<option value='3'>3+ BR</option>
-						<option value='4'>4+ BR</option>
+						{this.bedrooms()}
 					</select>
 					<div className='filters price'>
 						<span className='title'>Price</span>

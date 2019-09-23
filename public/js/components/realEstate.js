@@ -86,7 +86,8 @@ var Filter = function (_Component) {
 					return _react2.default.createElement(
 						'option',
 						{ key: item, value: item },
-						item
+						item,
+						' + BR'
 					);
 				});
 			}
@@ -133,26 +134,7 @@ var Filter = function (_Component) {
 							{ value: 'All' },
 							'All Homes'
 						),
-						_react2.default.createElement(
-							'option',
-							{ value: 'Ranch' },
-							'Ranch'
-						),
-						_react2.default.createElement(
-							'option',
-							{ value: 'Apartment' },
-							'Apartment'
-						),
-						_react2.default.createElement(
-							'option',
-							{ value: 'Studio' },
-							'Studio'
-						),
-						_react2.default.createElement(
-							'option',
-							{ value: 'Room' },
-							'Room'
-						)
+						this.homeTypes()
 					),
 					_react2.default.createElement(
 						'label',
@@ -162,31 +144,7 @@ var Filter = function (_Component) {
 					_react2.default.createElement(
 						'select',
 						{ name: 'bedrooms', className: 'filters bedrooms', onChange: this.props.change },
-						_react2.default.createElement(
-							'option',
-							{ value: '0' },
-							'0+ BR'
-						),
-						_react2.default.createElement(
-							'option',
-							{ value: '1' },
-							'1+ BR'
-						),
-						_react2.default.createElement(
-							'option',
-							{ value: '2' },
-							'2+ BR'
-						),
-						_react2.default.createElement(
-							'option',
-							{ value: '3' },
-							'3+ BR'
-						),
-						_react2.default.createElement(
-							'option',
-							{ value: '4' },
-							'4+ BR'
-						)
+						this.bedrooms()
 					),
 					_react2.default.createElement(
 						'div',
@@ -736,6 +694,16 @@ var listingsData = [{
 	extras: ['elevator', 'gym'],
 	homeType: 'Apartment',
 	image: 'http://static.materialicious.com/images/modern-luxury-apartment-exterior-design-o_3.jpg'
+}, {
+	address: '889 Beemore Street',
+	city: 'Newark',
+	state: 'NJ',
+	rooms: 1,
+	price: 300000,
+	floorSpace: 1000,
+	extras: ['elevator', 'gym'],
+	homeType: 'Studio',
+	image: 'http://telugunews.me/wp-content/uploads/2019/04/modern-studio-apartment-design-ideas-living-room-apartment-design-layout-cute-studio-apartment-ideas-modern-studio-apartment-apartment-plan-design-ideas-apartments-for-rent-long-island-city-ny.jpg'
 }];
 
 exports.default = listingsData;

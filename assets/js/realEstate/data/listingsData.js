@@ -91,6 +91,18 @@ var listingsData = [
 		extras: ['elevator', 'gym'],
 		homeType: 'Apartment',
 		image: 'http://static.materialicious.com/images/modern-luxury-apartment-exterior-design-o_3.jpg'
+	},
+	{
+		address: '889 Beemore Street',
+		city: 'Newark',
+		state: 'NJ',
+		rooms: 1,
+		price: 300000,
+		floorSpace: 1000,
+		extras: ['elevator', 'gym'],
+		homeType: 'Studio',
+		image:
+			'http://telugunews.me/wp-content/uploads/2019/04/modern-studio-apartment-design-ideas-living-room-apartment-design-layout-cute-studio-apartment-ideas-modern-studio-apartment-apartment-plan-design-ideas-apartments-for-rent-long-island-city-ny.jpg'
 	}
 ];
 
