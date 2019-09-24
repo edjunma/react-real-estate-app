@@ -116,7 +116,7 @@ export default class Listings extends Component {
 			<section id='listings'>
 				{/* Search Area */}
 				<section className='search-area'>
-					<input type='text' name='search' />
+					<input type='text' name='search' onChange={this.props.change}/>
 				</section>
 				{/* Sort By Section */}
 				<section className='sortby-area'>
