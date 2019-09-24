@@ -23,7 +23,8 @@ class App extends Component {
 			gym: false,
 			swimming_pool: false,
 			filteredData: listingsData,
-			populateFormsData: ''
+			populateFormsData: '',
+			sortby: 'price-asc'
 		};
 
 		this.change = this.change.bind(this);
@@ -75,6 +76,18 @@ class App extends Component {
 		if (this.state.homeType != 'All') {
 			newData = newData.filter(item => {
 				return item.homeType == this.state.homeType;
+			});
+		}
+
+		if (this.state.sortby == 'price-dsc') {
+			newData = newData.sort((a, b) => {
+				return a.price - b.price;
+			});
+		}
+
+		if (this.state.sortby == 'price-asc') {
+			newData = newData.sort((a, b) => {
+				return b.price - a.price;
 			});
 		}
 
@@ -135,7 +148,11 @@ class App extends Component {
 						globalState={this.state}
 						populateAction={this.populateForms}
 					/>
-					<Listings listingsData={this.state.filteredData} />
+					<Listings
+						listingsData={this.state.filteredData}
+						change={this.change}
+						globalState={this.state}
+					/>
 				</section>
 			</div>
 		);
