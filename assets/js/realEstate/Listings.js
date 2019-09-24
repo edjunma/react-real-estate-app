@@ -41,11 +41,11 @@ export default class Listings extends Component {
 										<div className='listing-details'>
 											<div className='floor-space'>
 												<i className='fa fa-square' aria-hidden='true'></i>
-												<span>1000 ft&sup2;</span>
+												<span>{listing.floorSpace} ft&sup2;</span>
 											</div>
 											<div className='bedrooms'>
 												<i className='fa fa-bed' aria-hidden='true'></i>
-												<span>{listing.bedrooms} bedrooms</span>
+												<span>{listing.rooms} bedrooms</span>
 											</div>
 										</div>
 										<div className='view-btn'>View Listing</div>
@@ -87,11 +87,11 @@ export default class Listings extends Component {
 										<div className='listing-details'>
 											<div className='floor-space'>
 												<i className='fa fa-square' aria-hidden='true'></i>
-												<span>1000 ft&sup2;</span>
+												<span>{listing.floorSpace} ft&sup2;</span>
 											</div>
 											<div className='bedrooms'>
 												<i className='fa fa-bed' aria-hidden='true'></i>
-												<span>{listing.bedrooms} bedrooms</span>
+												<span>{listing.rooms} bedrooms</span>
 											</div>
 										</div>
 										<div className='view-btn'>View Listing</div>
@@ -141,20 +141,24 @@ export default class Listings extends Component {
 					</div>
 				</section>
 
-				{/* Listing 1 */}
-				<section className='listings-results'>{this.loopListings()}</section>
+				{/* Listing Results */}
+				<section className='listings-results'>
+					<div className='row'>{this.loopListings()}</div>
+				</section>
 
 				{/* Pagination */}
 				<section id='pagination'>
-					<ul className='pages'>
-						<li>Prev</li>
-						<li className='active'>1</li>
-						<li>2</li>
-						<li>3</li>
-						<li>4</li>
-						<li>5</li>
-						<li>Next</li>
-					</ul>
+					<div className='row'>
+						<ul className='pages'>
+							<li>Prev</li>
+							<li className='active'>1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li>Next</li>
+						</ul>
+					</div>
 				</section>
 			</section>
 		);

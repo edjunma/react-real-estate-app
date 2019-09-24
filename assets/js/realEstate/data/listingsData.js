@@ -19,8 +19,7 @@ var listingsData = [
 		floorSpace: 4000,
 		extras: ['elevator', 'gym'],
 		homeType: 'House',
-		image:
-			'http://yslshoesshop.com/wp-content/uploads/2019/03/small-modern-apartment-apartment-small-modern-exterior-design-ideas-small-modern-apartment-exterior-design.jpg'
+		image: 'https://i.pinimg.com/originals/cf/16/2d/cf162db8ae558b14a09ec6b22df5a121.jpg'
 	},
 	{
 		address: '20-36 Rich Ave',
@@ -43,8 +42,7 @@ var listingsData = [
 		floorSpace: 3000,
 		extras: ['elevator', 'gym'],
 		homeType: 'Multi-Home',
-		image:
-			'http://vondells.com/daut/as/l/a/apartment-exterior-design-best-apartments-modern-small-living-room-decorating-ideas_exterior-apartment-design-ideas_exterior_exterior-homes-designs-home-design-tool-restaurant-software-free-shutter-ho_972x525.jpg'
+		image: 'https://www.watermarkalaska.com/wp-content/uploads/2014/01/17131_16.jpg'
 	},
 	{
 		address: '80 Kings Highway',
@@ -103,6 +101,18 @@ var listingsData = [
 		homeType: 'Studio',
 		image:
 			'http://telugunews.me/wp-content/uploads/2019/04/modern-studio-apartment-design-ideas-living-room-apartment-design-layout-cute-studio-apartment-ideas-modern-studio-apartment-apartment-plan-design-ideas-apartments-for-rent-long-island-city-ny.jpg'
+	},
+	{
+		address: '99 Prince Street',
+		city: 'Miami',
+		state: 'FL',
+		rooms: 4,
+		price: 600000,
+		floorSpace: 5000,
+		extras: ['elevator', 'gym'],
+		homeType: 'House',
+		image:
+			'https://www.freshpalace.com/wp-content/uploads/2014/04/Lighting-Evening-Pool-Lights-Modern-Retreat-Davie-Florida.jpg'
 	}
 ];
 
