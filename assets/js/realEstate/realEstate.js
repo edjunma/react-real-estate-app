@@ -31,6 +31,7 @@ class App extends Component {
 		this.change = this.change.bind(this);
 		this.filteredData = this.filteredData.bind(this);
 		this.populateForms = this.populateForms.bind(this);
+		this.changeView = this.changeView.bind(this);
 	}
 	componentWillMount() {
 		var listingsData = this.state.listingsData.sort((a, b) => {
@@ -55,6 +56,11 @@ class App extends Component {
 				this.filteredData();
 			}
 		);
+	}
+	changeView(viewName) {
+		this.setState({
+			view: viewName
+		});
 	}
 
 	filteredData() {
@@ -153,6 +159,7 @@ class App extends Component {
 						listingsData={this.state.filteredData}
 						change={this.change}
 						globalState={this.state}
+						changeView={this.changeView}
 					/>
 				</section>
 			</div>

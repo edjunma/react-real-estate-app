@@ -646,8 +646,16 @@ var Listings = function (_Component) {
 						_react2.default.createElement(
 							'div',
 							{ className: 'view' },
-							_react2.default.createElement('i', { className: 'fa fa-th-list', 'aria-hidden': 'true' }),
-							_react2.default.createElement('i', { className: 'fa fa-th', 'aria-hidden': 'true' })
+							_react2.default.createElement('i', {
+								className: 'fa fa-th-list',
+								'aria-hidden': 'true',
+								onClick: this.props.changeView.bind(null, 'long')
+							}),
+							_react2.default.createElement('i', {
+								className: 'fa fa-th',
+								'aria-hidden': 'true',
+								onClick: this.props.changeView.bind(null, 'box')
+							})
 						)
 					)
 				),
@@ -890,6 +898,7 @@ var App = function (_Component) {
 		_this.change = _this.change.bind(_this);
 		_this.filteredData = _this.filteredData.bind(_this);
 		_this.populateForms = _this.populateForms.bind(_this);
+		_this.changeView = _this.changeView.bind(_this);
 		return _this;
 	}
 
@@ -915,6 +924,13 @@ var App = function (_Component) {
 			this.setState(_defineProperty({}, name, value), function () {
 				console.log(_this2.state);
 				_this2.filteredData();
+			});
+		}
+	}, {
+		key: 'changeView',
+		value: function changeView(viewName) {
+			this.setState({
+				view: viewName
 			});
 		}
 	}, {
@@ -1014,7 +1030,8 @@ var App = function (_Component) {
 					_react2.default.createElement(_Listings2.default, {
 						listingsData: this.state.filteredData,
 						change: this.change,
-						globalState: this.state
+						globalState: this.state,
+						changeView: this.changeView
 					})
 				)
 			);
