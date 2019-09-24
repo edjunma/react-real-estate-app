@@ -116,11 +116,11 @@ export default class Listings extends Component {
 			<section id='listings'>
 				{/* Search Area */}
 				<section className='search-area'>
-					<input type='text' name='search' onChange={this.props.change}/>
+					<input type='text' name='search' onChange={this.props.change} />
 				</section>
 				{/* Sort By Section */}
 				<section className='sortby-area'>
-					<div className='results'>390 results found</div>
+					<div className='results'>{this.props.globalState.filteredData.length} results found</div>
 					<div className='sort-options'>
 						<select name='sortby' className='sortby' onChange={this.props.change}>
 							<option value='price-dsc'>Lowest Price</option>
