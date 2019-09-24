@@ -24,7 +24,8 @@ class App extends Component {
 			swimming_pool: false,
 			filteredData: listingsData,
 			populateFormsData: '',
-			sortby: 'price-asc'
+			sortby: 'price-asc',
+			view: 'box'
 		};
 
 		this.change = this.change.bind(this);
